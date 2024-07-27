@@ -1,0 +1,70 @@
+.yandex-search {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: rgb(22, 22, 23);
+    color: white;
+}
+
+.yandex-logo {
+    margin-top: 40px;
+    max-width: 272px;
+    width: 40%;
+}
+
+.yandex-search-input {
+    width: 60%;
+    margin-top: 48px;
+
+    background-color: rgb(35, 35, 37);
+    padding: 20px;
+    border: .1rem solid rgb(42, 42, 44);
+    border-radius: .8rem;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+}
+
+.yandex-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    max-width: 340px;
+    margin: 60px auto;
+
+    padding: 20px;
+    text-align: center;
+    justify-items: center;
+}
+
+.yandex-icon-grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100px;
+    height: 100px;
+
+    font-size: 10px;
+    font-family: 'Inter', 'Arial';
+    color: white;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.yandex-icon {
+    height: 39px;
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+.yandex-icon:hover {
+   transform: scale(1.2);
+}
+
+.yandex-icon-name {
+    font-family: 'Inter', 'Arial';
+    font-weight: 400;
+}

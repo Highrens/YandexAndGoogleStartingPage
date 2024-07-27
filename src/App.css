@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 100vh;
+}
+
+@import url(./vendor/normalize.css);
+@import url(./vendor/inter.css);
