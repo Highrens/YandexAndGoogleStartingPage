@@ -79,3 +79,7 @@
     border-bottom-right-radius: 1.1rem;
 
 }
+
+.BookmarkList_form-submit-hide{
+visibility: hidden;
+}

@@ -13,14 +13,20 @@ function BookmarkList(props) {
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
 
+  const [showSubitButton, setShowSubmitButton] = useState([false]);
+
   // Загрузка закладок из LocalStorage
   useEffect(() => {
     const storedBookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
     setBookmarks(storedBookmarks);
     if (storedBookmarks.length > 0) {
-     // props.isShown(true);
+     props.isShown(true);
     }
   }, []);
+
+  useEffect (() => {
+     setShowSubmitButton(name.length !== "" && link !== "" )
+  }, [name, link])
 
   // Сохранение закладок в LocalStorage
   const saveBookmarks = (newBookmarks) => {
@@ -58,7 +64,7 @@ function BookmarkList(props) {
           required
           placeholder="Ссылка:"
         />
-        <button className="BookmarkList_form-submit" type="submit">Add Bookmark</button>
+        <button className={showSubitButton ? "BookmarkList_form-submit" : "BookmarkList_form-submit BookmarkList_form-submit-hide"} type="submit">Add Bookmark</button>
       </form>
 
       <div className="icon-grid " >
@@ -69,7 +75,7 @@ function BookmarkList(props) {
             </a>
         ))}
       </div>
-      <button className="BookmarkList__close-button" onClick={props.isShown}>
+      <button className="BookmarkList__close-button " onClick={props.isShown}>
         x
       </button>
     </div>
