@@ -1,13 +1,16 @@
-import './App.css';
-import GoogleSearch from './Google/Google.js';
-import YandexSearch from './Yandex/Yandex.js';
+import "./App.css";
+
+import BookmarkList from "./BookmarkList/BookmarkList.js";
+import Bookmarks from "./Bookmarks/Bookmarks.js";
+import GoogleSearch from "./Google/Google.js";
+import YandexSearch from "./Yandex/Yandex.js";
 
 function App() {
   return (
     <div className="App">
-
-    <YandexSearch />
-    <GoogleSearch />
+      <YandexSearch />
+      <Bookmarks />
+      <GoogleSearch />
     </div>
   );
 }

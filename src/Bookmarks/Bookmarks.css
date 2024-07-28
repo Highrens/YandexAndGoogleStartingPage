@@ -1,0 +1,114 @@
+html {
+    overflow-y: hidden;
+}
+
+.Bookmarks {
+    font-family: Arial, sans-serif;
+    width: 0vw;
+    margin: 0 auto;
+    color: white;
+}
+
+@keyframes Bookmarks {
+    0% {
+        width: 0;
+    }
+    50%{
+        width: 0;
+    }
+    51% {
+        width: 5vw;
+    }
+    80%{
+        width: 100%;
+    }
+    
+}
+
+.Bookmarks_shown {
+    width: 100%;
+    animation-name: Bookmarks;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+}
+
+.Bookmarks-add-button {
+    position: absolute;
+    left: calc(50% - 5vw/2);
+    
+    margin-top: 90vh;
+    
+    width: 5vw;
+    height: 100px;
+
+    background-color: rgb(28, 28, 30);
+    /* border-radius:42px; */
+    border-top-left-radius: 1.3rem;
+    border-top-right-radius: 1.3rem;
+
+    border: 0px solid #5e5e5e;
+    padding: 10px 10px 0px;
+
+    cursor: pointer;
+    color: #5e5e5e;
+    font-family: Arial;
+    font-size: 28px;
+
+    scale: 1;
+    opacity: 1;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.Bookmarks-add-button_close {
+    margin-top: 0vh;
+    height: 1000px;
+    left: calc(50% - 33vw/2);
+    width: 33vw;
+    opacity: 1;
+    visibility: hidden;
+
+    animation-name: zipline-up;
+    animation-timing-function: linear;
+    animation-duration: .78s;
+}
+
+/* .Bookmarks-add-button:hover {
+    transform: scale(1.3, 1.3);
+    transition: transform 0.3s; 
+} */
+
+
+@keyframes zipline-up {
+    0% {
+        margin-top: 90vh;
+        height: 1000px;
+        width: 5vw;
+        left: calc(50% - 5vw/2);
+        visibility: visible;
+    }
+
+    50% {
+        margin-top: 0vh;
+        width: 5vw;
+        left: calc(50% - 5vw/2);
+        visibility: visible;
+    }
+
+    90% {
+        opacity: 1;
+        visibility: visible;
+        
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        margin-top: 0vh;
+        left: calc(50% - 33vw/2);
+        width: 33vw;
+    }
+}

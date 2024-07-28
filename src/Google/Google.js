@@ -57,11 +57,11 @@ function GoogleSearch() {
         />
         {/* <button type="submit" className="google-search-button">Искать в Google</button> */}
       </form>
-      <div className="google-icon-grid">
+      <div className="icon-grid">
         {apps.map((item) => (
-          <a key={item.id} href={item.url} className="google-icon-grid-item">
-            <img className="google-icon" alt="" src={item.icon} />
-            <h2 className="google-icon-name">{item.name}</h2>
+          <a key={item.id} href={item.url} className="icon-grid-item google-icon-grid-item">
+            <img className="icon" alt="" src={item.icon} />
+            <h2 className="icon-name">{item.name}</h2>
           </a>
         ))}
       </div>

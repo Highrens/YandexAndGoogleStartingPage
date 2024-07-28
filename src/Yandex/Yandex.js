@@ -75,11 +75,11 @@ function YandexSearch() {
           ))}
         </ul>
       )}
-      <div className="yandex-icon-grid">
+      <div className="icon-grid">
         {apps.map((item) => (
-          <a key={item.id} href={item.url} className="yandex-icon-grid-item">
-            <img className="yandex-icon" alt="" src={item.icon} />
-            <h2 className="yandex-icon-name">{item.name}</h2>
+          <a key={item.id} href={item.url} className="icon-grid-item ">
+            <img className="icon yandex-icon" alt="" src={item.icon} />
+            <h2 className="icon-name">{item.name}</h2>
           </a>
         ))}
       </div>

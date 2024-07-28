@@ -25,46 +25,14 @@
     color: rgb(255, 255, 255);
 }
 
-.yandex-icon-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-
-    max-width: 340px;
-    margin: 60px auto;
-
-    padding: 20px;
-    text-align: center;
-    justify-items: center;
-}
-
-.yandex-icon-grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    width: 100px;
-    height: 100px;
-
-    font-size: 10px;
-    font-family: 'Inter', 'Arial';
-    color: white;
-    border-radius: 15px;
-    text-decoration: none;
-}
-
-.yandex-icon {
-    height: 39px;
-    transform: scale(1);
-    transition: transform 0.3s;
-}
 
 .yandex-icon:hover {
-   transform: scale(1.2);
+    transition: .5s;
+    transform: scale(1.2);
 }
 
 .yandex-icon-name {
+    font-size: 1.5em;
     font-family: 'Inter', 'Arial';
     font-weight: 400;
 }
