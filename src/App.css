@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(2, 1fr);
   min-height: 100vh;
 }

@@ -13,15 +13,15 @@ import weather from '../Image/Yandex-icons/Weather_v4.svg';
 import music from '../Image/Yandex-icons/music_new.svg';
 
 const apps = [
-  { id: 1, url: 'https://example.com/link1', icon: disk, name: 'Диск'},
-  { id: 2, url: 'https://example.com/link2', icon: eda , name: 'Еда'},
-  { id: 3, url: 'https://example.com/link3', icon: kino , name: 'Кинопоиск'},
-  { id: 4, url: 'https://example.com/link4', icon: maps , name: 'Карты'},
-  { id: 5, url: 'https://example.com/link5', icon: market , name: 'Маркет'},
-  { id: 6, url: 'https://example.com/link6', icon: taxi , name: 'Такси'},
-  { id: 7, url: 'https://example.com/link7', icon: translate , name: 'Переводчик'},
-  { id: 8, url: 'https://example.com/link8', icon: weather , name: 'Погода'},
-  { id: 9, url: 'https://example.com/link9', icon: music , name: 'Музыка'},
+  { id: 1, url: 'https://disk.yandex.ru/', icon: disk, name: 'Диск'},
+  { id: 2, url: 'https://eda.yandex.ru/', icon: eda , name: 'Еда'},
+  { id: 3, url: 'https://www.kinopoisk.ru/', icon: kino , name: 'Кинопоиск'},
+  { id: 4, url: 'https://yandex.ru/maps', icon: maps , name: 'Карты'},
+  { id: 5, url: 'https://market.yandex.ru/', icon: market , name: 'Маркет'},
+  { id: 6, url: 'https://taxi.yandex.ru/', icon: taxi , name: 'Такси'},
+  { id: 7, url: 'https://translate.yandex.ru/', icon: translate , name: 'Переводчик'},
+  { id: 8, url: 'https://yandex.ru/pogoda', icon: weather , name: 'Погода'},
+  { id: 9, url: 'https://music.yandex.ru/', icon: music , name: 'Музыка'},
 ];
 
 function YandexSearch() {
@@ -59,12 +59,12 @@ function YandexSearch() {
         <input
           type="text"
           name="text"
-          placeholder="Найдётся всё"
+          placeholder="Найдется всё!"
           value={query}
           onChange={handleChange}
           className="yandex-search-input"
         />
-        {/* <button type="submit" className="yandex-search-button">Найти</button> */}
+        {/* <button type="submit" className="yandex-search-button">РќР°Р№С‚Рё</button> */}
       </form>
       {suggestions.length > 0 && (
         <ul className="yandex-suggestions">
