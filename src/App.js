@@ -13,17 +13,19 @@ function App() {
       <YandexSearch />
       <Bookmarks />
       <GoogleSearch />
-
-      <a
-                className="donation-link"
-      href="https://www.donationalerts.com/r/highrens">
-        <img
-          className="donation-image"
-          src={donationImage}
-          alt="pleaseDonateMe"
-        />
-        Если понравилось, можешь помочь разработчику покушать 👉👈
-      </a>
+      <div className="donation-link">
+        <a
+          
+          href="https://www.donationalerts.com/r/highrens"
+        >
+          <img
+            className="donation-image"
+            src={donationImage}
+            alt="pleaseDonateMe"
+          />
+          Если понравилась идея, можешь помочь разработчику покушать 👉👈
+        </a>
+      </div>
     </div>
   );
 }

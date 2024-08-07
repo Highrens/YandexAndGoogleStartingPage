@@ -12,6 +12,10 @@ import photos from "../Image/Google-Icons/photos.png";
 import tabs from "../Image/Google-Icons/tabs.png";
 import translate from "../Image/Google-Icons/translate.png";
 
+const donationImage =
+  "https://static.donationalerts.ru/uploads/qr/7021501/qr_fef0615cd29e18e3a4a884f22f2aff22.png";
+
+
 const apps = [
   { id: 1, url: "https://calendar.google.com/", icon: caledar, name: "Календарь" },
   { id: 2, url: "https://drive.google.com/drive/home", icon: disk, name: "Диск" },
@@ -38,15 +42,16 @@ function GoogleSearch() {
 
   return (
     <section className="google-search">
-      <a href="https://www.google.ru/">
-        <img src={GoogleLogo} alt="GoogleLogo" className="google-logo" />
-      </a>
+      
 
       <form
         action="https://www.google.com/search"
         method="get"
         className="google-search-form"
       >
+        <a href="https://www.google.ru/">
+        <img src={GoogleLogo} alt="GoogleLogo" className="google-logo" />
+      </a>
         <input
           type="text"
           name="q"

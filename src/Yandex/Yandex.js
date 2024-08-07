@@ -49,14 +49,15 @@ function YandexSearch() {
 
   return (
     <section className="yandex-search">
-      <a href="https://ya.ru/">
-        <img src={YandexLogo} alt="GoogleLogo" className="yandex-logo" />
-      </a>
+     
       <form
         className="yandex-search-form"
         action="https://yandex.ru/search/"
         method="get"
       >
+         <a href="https://ya.ru/">
+        <img src={YandexLogo} alt="GoogleLogo" className="yandex-logo" />
+      </a>
         <input
           type="text"
           name="text"

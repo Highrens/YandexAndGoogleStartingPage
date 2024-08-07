@@ -53,8 +53,9 @@ function BookmarkList(props) {
 
   return (
     <section className="BookmarkList">
-      <h1 className="BookmarkList__title">Закладки</h1>
+     
       <form className="BookmarkList__form" onSubmit={handleAddBookmark}>
+      <h1 className="BookmarkList__title">Закладки</h1>
         <input
           className="BookmarkList__form-name"
           type="text"
@@ -104,7 +105,7 @@ function BookmarkList(props) {
         ))}
       </ul>
       <button className="BookmarkList__close-button " onClick={props.isShown}>
-        x
+        +
       </button>
     </section>
   );

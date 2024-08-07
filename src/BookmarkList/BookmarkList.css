@@ -22,10 +22,11 @@
     font-size: 28px;
 
     background-color: rgb(78, 78, 78);
+    
+    border: .0rem solid rgb(131, 131, 131);
     border-top-left-radius: 1.3rem;
     border-top-right-radius: 1.3rem;
 
-    border: 0px solid #ff0000;
     padding: 10px 10px 0px;
 
     display: flex;
@@ -64,9 +65,6 @@
     margin-bottom: 5px;
     background-color: rgb(28, 28, 30);
     border: .05rem solid rgb(131, 131, 131);
-    /* border-bottom-left-radius: 1.1rem;
-    border-bottom-right-radius: 1.1rem; */
-
 }
 
 .icon-grid_bookmarks {
@@ -120,4 +118,20 @@
     opacity: 0;
     visibility: hidden;
     height: 0;
+}
+
+@media screen and (max-width: 1010px) {
+    .BookmarkList__close-button {
+
+        opacity: 0;
+    }
+
+    .BookmarkList__title {
+        font-size: 1.5em;
+        margin-top: 10px;
+    }
+
+    .BookmarkList__form {
+        width: 90%;
+    }
 }

@@ -15,6 +15,8 @@ const Bookmarks = () => {
         bookmarkListIsShown ? "Bookmarks Bookmarks_shown" : "Bookmarks"
       }
     >
+      <BookmarkList isShown={openBookmarks} />
+
       {bookmarkListIsShown ? (
         <button
           className="Bookmarks-add-button Bookmarks-add-button_close"
@@ -27,8 +29,6 @@ const Bookmarks = () => {
           +
         </button>
       )}
-
-      <BookmarkList isShown={openBookmarks} />
     </div>
   );
 };
