@@ -45,6 +45,9 @@ Yandex и Google обладают множеством полезных серв
 
 Благодарю за интерес и поддержку!
 
+## Известные баги:
+1. Некоректно отображение на Iphone
+
 [![GitHub stars](https://img.shields.io/github/stars/highrens/YandexAndGoogleStartingPage)](https://github.com/highrens/YandexAndGoogleStartingPage/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/highrens/YandexAndGoogleStartingPage)](https://github.com/highrens/YandexAndGoogleStartingPage/network/members)
 [![GitHub issues](https://img.shields.io/github/issues/highrens/YandexAndGoogleStartingPage)](https://github.com/highrens/YandexAndGoogleStartingPage/issues)
