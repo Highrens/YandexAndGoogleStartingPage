@@ -1,8 +1,5 @@
-html {
-    overflow-y: hidden;
-}
-
 .Bookmarks {
+    grid-area: bookmarks;
     font-family: Arial, sans-serif;
     width: 0vw;
     margin: 0 auto;
@@ -13,16 +10,19 @@ html {
     0% {
         width: 0;
     }
-    50%{
+
+    50% {
         width: 0;
     }
+
     51% {
         width: 5vw;
     }
-    80%{
+
+    80% {
         width: 100%;
     }
-    
+
 }
 
 .Bookmarks_shown {
@@ -35,9 +35,9 @@ html {
 .Bookmarks-add-button {
     position: absolute;
     left: calc(50% - 5vw/2);
-    
+
     margin-top: 90vh;
-    
+
     width: 5vw;
     height: 100px;
 
@@ -101,7 +101,7 @@ html {
     90% {
         opacity: 1;
         visibility: visible;
-        
+
     }
 
     100% {

@@ -37,7 +37,7 @@ function GoogleSearch() {
   };
 
   return (
-    <div className="google-search">
+    <section className="google-search">
       <a href="https://www.google.ru/">
         <img src={GoogleLogo} alt="GoogleLogo" className="google-logo" />
       </a>
@@ -65,7 +65,7 @@ function GoogleSearch() {
           </a>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

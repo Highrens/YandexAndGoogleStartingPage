@@ -39,6 +39,7 @@ function YandexSearch() {
         .then((response) => response.jsonp())
         .then((data) => {
           setSuggestions(data[1]);
+          console.log(data)
         })
         .catch((error) => console.error("Error fetching suggestions:", error));
     } else {
@@ -47,7 +48,7 @@ function YandexSearch() {
   };
 
   return (
-    <div className="yandex-search">
+    <section className="yandex-search">
       <a href="https://ya.ru/">
         <img src={YandexLogo} alt="GoogleLogo" className="yandex-logo" />
       </a>
@@ -83,7 +84,7 @@ function YandexSearch() {
           </a>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 export default YandexSearch;

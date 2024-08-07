@@ -1,9 +1,64 @@
+html {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
   display: flex;
-  grid-template-columns: repeat(2, 1fr);
   min-height: 100vh;
 }
+
+.donation-link {
+  position: absolute;
+
+  right: -130px;
+  bottom: -220px;
+
+  background-color: rgb(116, 116, 116);
+  transition: all 1s;
+
+  text-decoration: none;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  text-wrap: wrap;
+  
+  padding: 20px 10px;
+}
+
+.donation-link:hover {
+  right: 0;
+  bottom: 0;
+}
+
+.donation-image {
+  width: 100px;
+  padding-bottom: 20px;
+}
+
+
+
+@media screen and (max-width: 1010px) {
+  .App {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "yandex google"
+      "bookmarks bookmarks"
+  }
+
+  html {
+    overflow-y: scroll;
+  }
+}
+
+
 
 @import url(./vendor/normalize.css);
 @import url(./vendor/inter.css);
