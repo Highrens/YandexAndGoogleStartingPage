@@ -12,6 +12,7 @@ function App() {
       <YandexSearch />
       <Bookmarks />
       <GoogleSearch />
+      <Donate />
     </div>
   );
 }

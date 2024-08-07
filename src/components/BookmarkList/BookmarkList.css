@@ -1,5 +1,9 @@
 .BookmarkList {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
     font-family: Arial, sans-serif;
     width: 100%;
     min-height: 100%;
@@ -69,15 +73,13 @@
 
 .icon-grid_bookmarks {
     padding: 0;
-    width: 100%;
-    height: 340px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
 
     max-width: 340px;
-    margin: 20px auto;
+    margin: 12px 5px 20px;
 
 }
 
@@ -120,11 +122,17 @@
     height: 0;
 }
 
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 1080px) {
     .BookmarkList__close-button {
 
         opacity: 0;
     }
+
+    .icon-grid_bookmarks {
+        margin-top: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
 
     .BookmarkList__title {
         font-size: 1.5em;
@@ -134,4 +142,5 @@
     .BookmarkList__form {
         width: 90%;
     }
+
 }

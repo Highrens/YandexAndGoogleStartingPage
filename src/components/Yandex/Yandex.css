@@ -39,7 +39,7 @@
     color: rgb(255, 255, 255);
 }
 
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 1080px) {
     .yandex-search-input {
         width: 90%;
         padding: 10px;
