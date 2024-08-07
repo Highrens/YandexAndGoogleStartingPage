@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/YandexAndGoogleStartingPage/static/css/main.12e0b0e7.css",
-    "main.js": "/YandexAndGoogleStartingPage/static/js/main.81d6542e.js",
+    "main.css": "/YandexAndGoogleStartingPage/static/css/main.15f3b1d2.css",
+    "main.js": "/YandexAndGoogleStartingPage/static/js/main.b5310a36.js",
     "static/js/453.d7c64bcf.chunk.js": "/YandexAndGoogleStartingPage/static/js/453.d7c64bcf.chunk.js",
     "static/media/Inter-Medium.woff": "/YandexAndGoogleStartingPage/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff?v=3.19": "/YandexAndGoogleStartingPage/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -10,6 +10,7 @@
     "static/media/Inter-Black.woff2?v=3.19": "/YandexAndGoogleStartingPage/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
     "static/media/Inter-Regular.woff2?v=3.19": "/YandexAndGoogleStartingPage/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
     "static/media/Google-White.png": "/YandexAndGoogleStartingPage/static/media/Google-White.9ccb734aaa67b3023d10.png",
+    "static/media/yandex_logo.png": "/YandexAndGoogleStartingPage/static/media/yandex_logo.d405a4dc7378f539d918.png",
     "static/media/Translate_v6.svg": "/YandexAndGoogleStartingPage/static/media/Translate_v6.e992e3a7a606d1f0c9c7153515b3de46.svg",
     "static/media/Weather_v4.svg": "/YandexAndGoogleStartingPage/static/media/Weather_v4.bc87590673c759798bc26e74f294617e.svg",
     "static/media/Disk_v3.svg": "/YandexAndGoogleStartingPage/static/media/Disk_v3.f528a2aa9e642afac780c65c863bab83.svg",
@@ -20,12 +21,12 @@
     "index.html": "/YandexAndGoogleStartingPage/index.html",
     "static/media/Maps_v3.svg": "/YandexAndGoogleStartingPage/static/media/Maps_v3.46f32cbc30d1da72527099c7722233ba.svg",
     "static/media/music_new.svg": "/YandexAndGoogleStartingPage/static/media/music_new.e7074ac65d3da6ab2d7ccec884520f1d.svg",
-    "main.12e0b0e7.css.map": "/YandexAndGoogleStartingPage/static/css/main.12e0b0e7.css.map",
-    "main.81d6542e.js.map": "/YandexAndGoogleStartingPage/static/js/main.81d6542e.js.map",
+    "main.15f3b1d2.css.map": "/YandexAndGoogleStartingPage/static/css/main.15f3b1d2.css.map",
+    "main.b5310a36.js.map": "/YandexAndGoogleStartingPage/static/js/main.b5310a36.js.map",
     "453.d7c64bcf.chunk.js.map": "/YandexAndGoogleStartingPage/static/js/453.d7c64bcf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.12e0b0e7.css",
-    "static/js/main.81d6542e.js"
+    "static/css/main.15f3b1d2.css",
+    "static/js/main.b5310a36.js"
   ]
 }
