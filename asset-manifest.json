@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/YandexAndGoogleStartingPage/static/css/main.15f3b1d2.css",
-    "main.js": "/YandexAndGoogleStartingPage/static/js/main.b5310a36.js",
+    "main.css": "/YandexAndGoogleStartingPage/static/css/main.c9232c28.css",
+    "main.js": "/YandexAndGoogleStartingPage/static/js/main.6279fdc0.js",
     "static/js/453.d7c64bcf.chunk.js": "/YandexAndGoogleStartingPage/static/js/453.d7c64bcf.chunk.js",
     "static/media/Inter-Medium.woff": "/YandexAndGoogleStartingPage/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff?v=3.19": "/YandexAndGoogleStartingPage/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -21,12 +21,12 @@
     "index.html": "/YandexAndGoogleStartingPage/index.html",
     "static/media/Maps_v3.svg": "/YandexAndGoogleStartingPage/static/media/Maps_v3.46f32cbc30d1da72527099c7722233ba.svg",
     "static/media/music_new.svg": "/YandexAndGoogleStartingPage/static/media/music_new.e7074ac65d3da6ab2d7ccec884520f1d.svg",
-    "main.15f3b1d2.css.map": "/YandexAndGoogleStartingPage/static/css/main.15f3b1d2.css.map",
-    "main.b5310a36.js.map": "/YandexAndGoogleStartingPage/static/js/main.b5310a36.js.map",
+    "main.c9232c28.css.map": "/YandexAndGoogleStartingPage/static/css/main.c9232c28.css.map",
+    "main.6279fdc0.js.map": "/YandexAndGoogleStartingPage/static/js/main.6279fdc0.js.map",
     "453.d7c64bcf.chunk.js.map": "/YandexAndGoogleStartingPage/static/js/453.d7c64bcf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.15f3b1d2.css",
-    "static/js/main.b5310a36.js"
+    "static/css/main.c9232c28.css",
+    "static/js/main.6279fdc0.js"
   ]
 }
