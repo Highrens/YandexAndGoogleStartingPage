@@ -10,39 +10,9 @@ html, body {
   flex:  auto;
 }
 
-.donation-link {
 
-  position: absolute;
 
-  left: -100px;
-  bottom: -220px;
-
-  background-color: rgb(116, 116, 116);
-  transition: all 1s;
-
-  text-decoration: none;
-  color: #ffffff;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 120px;
-  text-wrap: wrap;
-  
-  padding: 20px 10px;
-}
-
-.donation-link:hover {
-  left: 0;
-  bottom: 0;
-}
-
-.donation-image {
-  width: 100px;
-  padding-bottom: 20px;
-}
-/* 
-a, form, img{
+/* a, form, div,input, img{
   border: solid 1px red;
   box-sizing: content-box;
 } */

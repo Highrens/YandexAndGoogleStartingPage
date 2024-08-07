@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import "./Google.css";
-import GoogleLogo from "../Image/Google-White.png";
+import GoogleLogo from "../../Image/Google-White.png";
 
-import caledar from "../Image/Google-Icons/calendar.png";
-import disk from "../Image/Google-Icons/disk.png";
-import docs from "../Image/Google-Icons/docs.png";
-import keep from "../Image/Google-Icons/keep.png";
-import mail from "../Image/Google-Icons/mail.png";
-import maps from "../Image/Google-Icons/maps.png";
-import photos from "../Image/Google-Icons/photos.png";
-import tabs from "../Image/Google-Icons/tabs.png";
-import translate from "../Image/Google-Icons/translate.png";
+import caledar from "../../Image/Google-Icons/calendar.png";
+import disk from "../../Image/Google-Icons/disk.png";
+import docs from "../../Image/Google-Icons/docs.png";
+import keep from "../../Image/Google-Icons/keep.png";
+import mail from "../../Image/Google-Icons/mail.png";
+import maps from "../../Image/Google-Icons/maps.png";
+import photos from "../../Image/Google-Icons/photos.png";
+import tabs from "../../Image/Google-Icons/tabs.png";
+import translate from "../../Image/Google-Icons/translate.png";
 
 const donationImage =
   "https://static.donationalerts.ru/uploads/qr/7021501/qr_fef0615cd29e18e3a4a884f22f2aff22.png";

@@ -105,7 +105,7 @@ function BookmarkList(props) {
         ))}
       </ul>
       <button className="BookmarkList__close-button " onClick={props.isShown}>
-        +
+        ✖
       </button>
     </section>
   );

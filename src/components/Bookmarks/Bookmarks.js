@@ -10,20 +10,10 @@ const Bookmarks = () => {
   }
 
   return (
-    <div
-      className={
-        bookmarkListIsShown ? "Bookmarks Bookmarks_shown" : "Bookmarks"
-      }
-    >
+    <div  className={ bookmarkListIsShown ? "Bookmarks Bookmarks_shown" : "Bookmarks"}  >
       <BookmarkList isShown={openBookmarks} />
-
       {bookmarkListIsShown ? (
-        <button
-          className="Bookmarks-add-button Bookmarks-add-button_close"
-          onClick={openBookmarks}
-        >
-          x
-        </button>
+        <button  className="Bookmarks-add-button Bookmarks-add-button_close"  onClick={openBookmarks} ></button>
       ) : (
         <button className="Bookmarks-add-button" onClick={openBookmarks}>
           +

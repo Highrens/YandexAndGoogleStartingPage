@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import "./Yandex.css";
-import YandexLogo from "../Image/yandex_logo.png";
+import YandexLogo from "../../Image/yandex_logo.png";
 
-import disk from "../Image/Yandex-icons/Disk_v3.svg";
-import eda from "../Image/Yandex-icons/Eda_v3.svg";
-import kino from "../Image/Yandex-icons/Kinopoisk_v4.svg";
-import maps from "../Image/Yandex-icons/Maps_v3.svg";
-import market from "../Image/Yandex-icons/Market_v53.svg";
-import taxi from "../Image/Yandex-icons/Taxi_v3.svg";
-import translate from '../Image/Yandex-icons/Translate_v6.svg';
-import weather from '../Image/Yandex-icons/Weather_v4.svg';
-import music from '../Image/Yandex-icons/music_new.svg';
+import disk from "../../Image/Yandex-icons/Disk_v3.svg";
+import eda from "../../Image/Yandex-icons/Eda_v3.svg";
+import kino from "../../Image/Yandex-icons/Kinopoisk_v4.svg";
+import maps from "../../Image/Yandex-icons/Maps_v3.svg";
+import market from "../../Image/Yandex-icons/Market_v53.svg";
+import taxi from "../../Image/Yandex-icons/Taxi_v3.svg";
+import translate from '../../Image/Yandex-icons/Translate_v6.svg';
+import weather from '../../Image/Yandex-icons/Weather_v4.svg';
+import music from '../../Image/Yandex-icons/music_new.svg';
 
 const apps = [
   { id: 1, url: 'https://disk.yandex.ru/', icon: disk, name: 'Диск'},
