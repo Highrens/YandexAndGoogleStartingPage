@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/YandexAndGoogleStartingPage/static/css/main.6e77e891.css",
-    "main.js": "/YandexAndGoogleStartingPage/static/js/main.69817238.js",
+    "main.js": "/YandexAndGoogleStartingPage/static/js/main.19e9be40.js",
     "static/js/453.d7c64bcf.chunk.js": "/YandexAndGoogleStartingPage/static/js/453.d7c64bcf.chunk.js",
     "static/media/Inter-Medium.woff": "/YandexAndGoogleStartingPage/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff?v=3.19": "/YandexAndGoogleStartingPage/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -22,11 +22,11 @@
     "static/media/Maps_v3.svg": "/YandexAndGoogleStartingPage/static/media/Maps_v3.46f32cbc30d1da72527099c7722233ba.svg",
     "static/media/music_new.svg": "/YandexAndGoogleStartingPage/static/media/music_new.e7074ac65d3da6ab2d7ccec884520f1d.svg",
     "main.6e77e891.css.map": "/YandexAndGoogleStartingPage/static/css/main.6e77e891.css.map",
-    "main.69817238.js.map": "/YandexAndGoogleStartingPage/static/js/main.69817238.js.map",
+    "main.19e9be40.js.map": "/YandexAndGoogleStartingPage/static/js/main.19e9be40.js.map",
     "453.d7c64bcf.chunk.js.map": "/YandexAndGoogleStartingPage/static/js/453.d7c64bcf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6e77e891.css",
-    "static/js/main.69817238.js"
+    "static/js/main.19e9be40.js"
   ]
 }
