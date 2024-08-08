@@ -10,9 +10,11 @@
     margin: 0 auto;
 
     background-color: rgb(28, 28, 30);
+
     color: white;
 
     overflow: hidden;
+    
 }
 
 .BookmarkList__close-button {
@@ -106,16 +108,17 @@
     opacity: 1;
     visibility: visible;
     height: auto;
+    padding:  10px;
 }
 
 .icon-remove {
+    cursor: pointer;
     border-radius: 50%;
     background-color: rgb(57, 57, 61);
     border: .05rem solid rgb(131, 131, 131);
     color: rgb(131, 131, 131);
     opacity: 0.1;
-    transition: all .1s ease-in-out .5s;
-    visibility: visible;
+    transition: all 1s ease-in-out .5s;
 
     opacity: 0;
     visibility: hidden;

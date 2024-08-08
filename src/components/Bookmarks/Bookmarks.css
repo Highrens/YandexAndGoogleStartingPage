@@ -58,6 +58,10 @@
     transition: all .78s;
 }
 
+.Bookmarks-add-button:hover {
+    bottom: -10px;
+}
+
 .Bookmarks-add-button_close {
 
     width: 33vw;
@@ -91,7 +95,7 @@
 @keyframes zipline-up {
     0% {
         visibility: visible;
-        height: 00vh;
+        height: 100px;
         width: 5vw;
         left: calc(50% - 5vw/2);
         opacity: 1;

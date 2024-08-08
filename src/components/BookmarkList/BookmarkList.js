@@ -4,7 +4,9 @@ import "./BookmarkList.css";
 // Функция для получения favicon по URL
 const getFavicon = (url) => {
   const urlObj = new URL(url);
-  return `${urlObj.origin}/favicon.ico`;
+  console.log(urlObj);
+  return `https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${url}&size=64`
+  // return `${urlObj.origin}/favicon.ico`;
 };
 
 function BookmarkList(props) {
@@ -100,7 +102,7 @@ function BookmarkList(props) {
                 {bookmark.name}
               </h2>
             </a>
-           
+            <button onClick={removeBookmark} className="icon-remove"></button>
           </li>
         ))}
       </ul>
