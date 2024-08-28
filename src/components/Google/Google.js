@@ -41,35 +41,36 @@ function GoogleSearch() {
   };
 
   return (
-    <section className="google-search">
+    <section className="full-section full-section_google">
       
-
-      <form
-        action="https://www.google.com/search"
+      <form action="https://www.google.com/search"
         method="get"
-        className="google-search-form"
+        className="search-form"
       >
-        <a href="https://www.google.ru/">
-        <img src={GoogleLogo} alt="GoogleLogo" className="google-logo" />
+      <a href="https://www.google.ru/">
+        <img src={GoogleLogo} alt="GoogleLogo" className="logo" />
       </a>
         <input
           type="text"
-          name="q"
+          name="text"
           placeholder="Введите поисковый запрос"
           value={query}
           onChange={handleChange}
-          className="google-search-input"
+          className="search-form__input search-form__input_google"
         />
         {/* <button type="submit" className="google-search-button">Искать в Google</button> */}
       </form>
-      <div className="icon-grid">
+
+      <ul className="icon-grid">
         {apps.map((item) => (
-          <a key={item.id} href={item.url} className="icon-grid-item google-icon-grid-item">
-            <img className="icon" alt="" src={item.icon} />
-            <h2 className="icon-name">{item.name}</h2>
+         <li key={item.id} className="icon-grid-item icon-grid-item_google">
+           <a  href={item.url} className="icon-grid-item_link ">
+            <img className="icon-grid-item_icon" alt="" src={item.icon} />
+            <h2 className="icon-grid-item_name">{item.name}</h2>
           </a>
+         </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

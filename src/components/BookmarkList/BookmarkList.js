@@ -1,113 +1,68 @@
 ﻿import React, { useState, useEffect } from "react";
 import "./BookmarkList.css";
 
+import trashcan from "../../Image/trashcan.png";
+
 // Функция для получения favicon по URL
 const getFavicon = (url) => {
-  const urlObj = new URL(url);
-  console.log(urlObj);
-  return `https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${url}&size=64`
+  // const urlObj = new URL(url);
+  return `https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${url}&size=64`;
   // return `${urlObj.origin}/favicon.ico`;
 };
 
 function BookmarkList(props) {
-  const [bookmarks, setBookmarks] = useState([]);
-  const [name, setName] = useState("");
-  const [link, setLink] = useState("");
-
-  const [showSubitButton, setShowSubmitButton] = useState([false]);
-
-  // Загрузка закладок из LocalStorage
-  useEffect(() => {
-    const storedBookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
-    setBookmarks(storedBookmarks);
-    if (storedBookmarks.length > 0) {
-      props.isShown(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    setShowSubmitButton(name.length !== "" && link !== "");
-  }, [name, link]);
-
-  // Сохранение закладок в LocalStorage
-  const saveBookmarks = (newBookmarks) => {
-    localStorage.setItem("bookmarks", JSON.stringify(newBookmarks));
-  };
-
-  // Обработка добавления новой закладки
-  const handleAddBookmark = (e) => {
-    e.preventDefault();
-    const newBookmark = { name, link };
-    const updatedBookmarks = [...bookmarks, newBookmark];
-    setBookmarks(updatedBookmarks);
-    saveBookmarks(updatedBookmarks);
-    setName("");
-    setLink("");
-  };
-
-  //удаление закладки
-  function removeBookmark(url) {
-    console.log(url);
-    const newArr = bookmarks.filter((bookmark) => bookmark.link !== url);
-    setBookmarks(newArr);
-    saveBookmarks(newArr);
-  }
-
   return (
     <section className="BookmarkList">
-     
-      <form className="BookmarkList__form" onSubmit={handleAddBookmark}>
-      <h1 className="BookmarkList__title">Закладки</h1>
+      <form className="search-form">
+        <h1 className="BookmarkList__title">Закладки</h1>
         <input
-          className="BookmarkList__form-name"
+          className="search-form__input search-form__input_bookmarkList"
           type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-          placeholder="Имя ссылки:"
+          onChange={(e) => props.changeSearhInput(e.target.value)}
+          placeholder="Поиск по вкладкам"
         />
-        <input
-          className="BookmarkList__form-url"
-          type="url"
-          value={link}
-          onChange={(e) => setLink(e.target.value)}
-          required
-          placeholder="Ссылка:"
-        />
-        <button
-          className={
-            showSubitButton
-              ? "BookmarkList_form-submit"
-              : "BookmarkList_form-submit BookmarkList_form-submit-hide"
-          }
-          type="submit"
-        >
-          Add Bookmark
-        </button>
       </form>
 
-      <ul className="icon-grid_bookmarks">
-        {bookmarks.map((bookmark, index) => (
-          <li key={index} className="icon-grid-item Bookmark">
-            <a
-              href={bookmark.link}
-              className="icon-grid-item google-icon-grid-item"
-            >
+      <ul className={props.bookmarks.length > 9 ? "icon-grid icon-grid_wide" : "icon-grid" }>
+        {props.bookmarks.map((bookmark, index) => (
+          // Одна закладка
+          <li key={index} className="icon-grid-item icon-grid-item_google">
+            <a href={bookmark.link} className="icon-grid-item_link">
               <img
-                className="icon"
+                className="icon-grid-item_icon"
                 src={getFavicon(bookmark.link)}
                 alt={`${bookmark.name} favicon`}
               />
-              <h2 className="icon-name" target="_blank">
+              <h2 className="icon-grid-item_name" target="_blank">
                 {bookmark.name}
               </h2>
             </a>
-            <button onClick={removeBookmark} className="icon-remove"></button>
+            {/* Кнопка удаления, появляется при наведении */}
+            <button
+              onClick={() => props.removeBookmark(bookmark.link)}
+              className="remove-button"
+            >
+              <img
+                className="remove-button-icon"
+                src={trashcan}
+                alt="remove-bookmark"
+              />
+            </button>
           </li>
         ))}
+        {/* кнопка открытия pop-up для добавления новой закладки */}
+        <button
+          className="BookmarkList__add-button"
+          onClick={props.changePopupVisibility}
+        >
+          +
+        </button>
       </ul>
-      <button className="BookmarkList__close-button " onClick={props.isShown}>
-        ✖
+      <button
+        className="BookmarkList__close-button "
+        onClick={props.changeBookmarksVisability}
+      >
+        ↓
       </button>
     </section>
   );
