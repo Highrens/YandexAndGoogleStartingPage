@@ -27,7 +27,7 @@ Yandex и Google обладают множеством полезных серв
 2. **Поисковые подсказки Google и Yandex**: Реализую, как только получу API-ключи.
 3. **Экспорт вкладок в формате JSON**.
 4. **Смена цветов фона (редизайн)**.
-5. **Рефакторинг CSS в более удобный формат**.
+5. ~~**Рефакторинг CSS в более удобный формат**.~~ Готово
 
 ## Скриншоты
 ![Главная страница](https://github.com/Highrens/YandexAndGoogleStartingPage/blob/main/src/Image/Screenshot.png)
@@ -46,7 +46,7 @@ Yandex и Google обладают множеством полезных серв
 Благодарю за интерес и поддержку!
 
 ## Известные баги:
-1. Некоректно отображение на Iphone
+1. ~~Некоректно отображение на Iphone~~ Пофикшено
 
 [![GitHub stars](https://img.shields.io/github/stars/highrens/YandexAndGoogleStartingPage)](https://github.com/highrens/YandexAndGoogleStartingPage/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/highrens/YandexAndGoogleStartingPage)](https://github.com/highrens/YandexAndGoogleStartingPage/network/members)
