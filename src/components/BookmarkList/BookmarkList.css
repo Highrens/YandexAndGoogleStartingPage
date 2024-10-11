@@ -1,15 +1,17 @@
 .BookmarkList {
+    grid-area: bookmarks;
+
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     font-family: Arial, sans-serif;
-    width: 100%;
-    min-height: 100%;
+    width: 140%;
+    min-height: 100vh;
     margin: 0 auto;
 
-    background-color: rgb(28, 28, 30);
+    background-color: var(--main-color);
 
     color: white;
 
@@ -17,48 +19,20 @@
 
 }
 
-.BookmarkList__close-button {
-    margin: auto;
-    width: 5vw;
-    height: 100px;
-    position: absolute;
-    bottom: 0;
-    left: calc(50% - 2.5vw);
-    font-family: Arial;
-    font-size: 28px;
-
-    background-color: rgb(78, 78, 78);
-
-    border: .0rem solid rgb(131, 131, 131);
-    border-top-left-radius: 1.3rem;
-    border-top-right-radius: 1.3rem;
-
-    padding: 10px 10px 0px;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    transition: bottom .5s ease-in-out .1s;
-}
-
-.BookmarkList__close-button:hover{
-    position: absolute;
-    bottom: -10px;
-}
-
 .BookmarkList__title {
     font-size: 2em;
     margin: 40px auto 4px;
 }
 
-.BookmarkList__form {
+.BookmarkList__search-form {
     width: 100%;
-    margin: 0 auto 0;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
 }
 
-.BookmarkList__add-button{
+.BookmarkList__add-button {
     background: none;
     border: none;
     border-radius: 15px;
@@ -70,36 +44,34 @@
     aspect-ratio: 1/1;
 }
 
-.BookmarkList__add-button:hover{
+.BookmarkList__add-button:hover {
 
     opacity: 1;
     border: 7px rgba(95, 95, 95, 0.555) solid;
     background: rgba(63, 63, 63, 0.555);
 }
 
-.BookmarkList__add-button:active{
+.BookmarkList__add-button:active {
     background: black;
 }
 
 .search-form__input_bookmarkList {
-  
-    background-color: rgb(35, 35, 37);
-    border: .05rem solid rgb(80, 80, 80);
+
+    background-color: var(--main-google-color);
+    border: .05rem solid var(--border-color);
     border-radius: 1.3rem;
 }
 
-
-
 .BookmarkList_form-submit {
     padding: 7px;
-    color: white;
+    color: var(--text-color);
     padding-left: 30px;
     background-color: rgb(57, 57, 61);
     border: .05rem solid rgb(131, 131, 131);
     border-bottom-left-radius: 1.1rem;
     border-bottom-right-radius: 1.1rem;
     transition: all .5s;
-    
+
 }
 
 .BookmarkList_form-submit:hover {
@@ -112,7 +84,7 @@
 
 .remove-button {
     height: 30px;
-    width: 30px;
+    /* width: 30px; */
     position: absolute;
     bottom: 0;
     cursor: pointer;
@@ -123,7 +95,7 @@
     color: rgb(131, 131, 131);
 
     opacity: 0;
-    transition: bottom  0.5s ease-in-out .5s, opacity 0.5s ease-in-out .5s;
+    transition: bottom 0.5s ease-in-out .5s, opacity 0.5s ease-in-out .5s;
 }
 
 .icon-grid-item:hover .remove-button {
@@ -140,9 +112,18 @@
     max-width: 90%;
 }
 
-@media screen and (max-width: 1010px) {
-    .BookmarkList__close-button {
+@media screen and (max-width: 500px) {
+    .icon-grid_wide {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
+@media screen and (max-width: 1010px) {
+    .BookmarkList {
+        width: 100%;
+    }
+
+    .BookmarkList__close-button {
         opacity: 0;
     }
 

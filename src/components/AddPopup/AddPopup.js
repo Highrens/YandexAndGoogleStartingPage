@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
-import "./Popup.css";
+import "./AddPopup.css";
 
-function Popup(props) {
+import close from "../../Image/close.png";
+
+function AddPopup(props) {
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
   const [isDisabled, setIsDisabled] = useState(false);
+
+  const ClosePopup = () => {
+    props.changePopupVisibility("none");
+  }
 
   // Обработка добавления новой закладки
   const AddBookmark = (e) => {
@@ -14,25 +20,34 @@ function Popup(props) {
     if (!newBookmark.link.includes("https://")) {
       newBookmark.link = "https://" + newBookmark.link;
     }
-    
+
     props.addBookmark(newBookmark);
 
     setName("");
     setLink("");
-    props.changePopupVisibility();
+    props.changePopupVisibility("none");
   };
 
   //для переключения состояния кнопки
   useEffect(() => {
-    setIsDisabled(name === "" || link === "")
+    setIsDisabled(name === "" || link === "");
   }, [name, link]);
 
   return (
-    <section className={props.popupIsShown ? "Popup Popup_shown" : "Popup"}>
-      <button className="Popup__close-button" onClick={props.changePopupVisibility}>✖</button>
+    <section
+      className={
+        props.popupIsShown === "AddPopup" ? "Popup Popup_shown" : "Popup"
+      }
+    >
+      <button
+        className="Popup__close-button"
+        onClick={ClosePopup}
+      >
+        <img className="settings__icon" src={close} alt="close"></img>
+      </button>
       <form className="Popup__form" onSubmit={AddBookmark}>
         <input
-          className="Popup__form-name"
+          className="Popup__form-input"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -40,7 +55,7 @@ function Popup(props) {
           placeholder="Имя ссылки:"
         />
         <input
-          className="Popup__form-url"
+          className="Popup__form-input"
           type="text"
           value={link}
           onChange={(e) => setLink(e.target.value)}
@@ -59,4 +74,4 @@ function Popup(props) {
   );
 }
 
-export default Popup;
+export default AddPopup;

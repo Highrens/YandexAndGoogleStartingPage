@@ -1,0 +1,142 @@
+.Popup {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.436);
+    opacity: 0;
+    display: none;
+    transition: all 4s;
+    animation-name: fadein;
+    animation-timing-function: ease-in-out;
+    animation-duration: .5s;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.Popup_shown {
+    display: flex;
+    opacity: 1;
+}
+
+.Popup__close-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    padding: 0;
+
+    margin: 0 auto 0 calc(50% + 150px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: .05rem solid var(--border-color);
+    background-color: var(--main-google-color);
+
+    transition: .5s;
+    font-size: 30px;
+    color: var(--text-color)
+}
+
+
+
+.Popup__close-button:hover {
+    background-color: var(--highlight-color);
+}
+
+
+.Popup__form {
+    position: relative;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    width: 300px;
+    padding: 10px;
+
+    background-color: var(--main-google-color);
+    border: .05rem solid var(--border-color);
+    border-radius: 35px;
+    animation-name: openPopup;
+    animation-timing-function: ease-in-out;
+    animation-duration: .5s;
+    box-shadow: 0px 5px 15px 3px #000000;
+    color: var(--text-color);
+}
+
+@keyframes openPopup {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.Popup__form-input {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 10px;
+
+    line-height: normal;
+    background-color: var(--border-color) ;
+
+    border: .05rem solid var(--border-color);
+    border-radius: 25px;
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+.Popup__form-input::placeholder{
+    color: var(--main-google-color);
+}
+
+.Popup__form-submit {
+    width: 100%;
+
+    padding: 10px;
+
+    background-color: var(--succes-color);
+    border: .05rem solid var(--border-color);
+    border-radius: 25px;
+
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+.Popup__form-submit:hover {
+    background-color: var(--succes-highlight-color);
+}
+
+.Popup__form-submit:disabled {
+    background-color: var(--main-google-color);
+    color: rgb(70, 70, 70);
+}
+
+@media screen and (max-width: 450px) {
+    .Popup__form {
+        width: 70%;
+    }
+
+    .Popup__close-button {
+        margin-left: 75%;
+        margin-bottom: 10px;
+    }
+}

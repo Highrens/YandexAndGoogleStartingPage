@@ -1,0 +1,118 @@
+.checkbox {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: var(--text-color);
+    box-sizing: border-box;
+
+    border-radius: 25px;
+    background-color: var(--border-color);
+    padding: 15px;
+    text-align: start;
+}
+
+.checkbox:last-of-type {
+    margin-bottom: 0px;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    border-radius: 25px;
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    height: 25px;
+    width: 25px;
+    background-color: var(--main-google-color);
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input:checked~.checkmark {
+    background-color: var(--succes-color);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.Popup__form-textarea {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
+    color: var(--text-color);
+    background-color: var(--main-google-color);
+    border-radius: 25px;
+}
+
+.Popup__links {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+
+    border-radius: 2.3rem;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    min-width: 10%;
+    transform: translate(-50%, 0);
+    padding: 10px;
+    list-style: none;
+    border: .05rem solid var(--border-color);
+    background-color: var(--main-google-color);
+}
+
+.Popup__link {
+    width: 25px;
+    height: 25px;
+    border: .05rem solid var(--border-color);
+
+    padding: 10px;
+    border-radius: 2.3rem;
+    transition: .5s;
+}
+
+.Popup__link:hover{
+    background-color: var(--highlight-color);
+}

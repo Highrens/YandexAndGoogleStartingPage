@@ -1,0 +1,87 @@
+.settings {
+    margin: auto;
+    min-width: 20%;
+    padding: 10px 10px 0;
+
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: space-between;
+
+    background-color: var(--main-google-color);
+    border-right: .05rem solid var(--border-color);
+    border-left: .05rem solid var(--border-color);
+    border-top: .05rem solid var(--border-color);
+    border-top-left-radius: 2.3rem;
+    border-top-right-radius: 2.3rem;
+
+    box-shadow: 0px 5px 8px 3px #00000078;
+    animation: openSettings .5s ease-out .1s;
+
+
+    border: .05rem solid var(--border-color);
+ 
+    padding: 10px;
+    border-radius: 2.3rem;
+    margin-bottom: 10px;
+}
+
+@keyframes openSettings {
+    0% {
+        bottom: -66px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+.settings__button {
+    /* width: 48px; */
+    height: 48px;
+    border-radius: 25px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .05rem solid var(--border-color);
+    background-color: var(--main-google-color);
+    transition: .5s;
+    /* font-size: 30px; */
+    color: white;
+
+    margin-right: 5px;
+    /* width: auto;
+    border-radius: 15px;
+    font-size: 1em;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif; */
+}
+.settings__button:last-of-type{
+    margin-right: 0px;
+}
+
+.settings__button_active {
+    background-color: var(--succes-color);
+}
+
+.settings__button:hover {
+    background-color: var(--highlight-color);
+}
+
+.settings__icon {
+    width: 25px;
+}
+
+@media screen and (max-width: 1000px) {
+    .settings{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .settings{
+        width: 90%;
+    }
+}
