@@ -18,8 +18,6 @@ import {
 import SettingPopup from "./components/SettingPopup/SettingPopup.js";
 
 function App() {
-  const [bookmarkListIsShown, setBookmarkListIsShown] = useState(false);
-
   const [popupIsShown, setPopupIsShown] = useState("none");
   const [bookmarks, setBookmarks] = useState([]);
   const [currentBookmark, setCurrentBookmark] = useState({});
@@ -28,12 +26,18 @@ function App() {
 
   const [currentSettings, setCurrentSettings] = useState(defaultSettings);
 
+  const [columns, setColums] = useState(3);
+
   useEffect(() => {
     // Загрузка закладок из LocalStorage
     const storedBookmarks = getAllBookmarks();
     setBookmarks(storedBookmarks);
-    if (storedBookmarks.length > 0) {
-      setBookmarkListIsShown(true);
+
+    if (storedBookmarks.length < 3) {
+      setColums(3);
+    } else {
+      setColums(Math.ceil(storedBookmarks.length / 3));
+      console.log(storedBookmarks.length / 3);
     }
 
     // Загрузка настроек из LocalStorage
@@ -147,10 +151,6 @@ function App() {
     saveBookmarks(newArr);
   }
 
-  // Открыть закладки
-  const changeBookmarksVisability = () => {
-    setBookmarkListIsShown(!bookmarkListIsShown);
-  };
   //Переключение режима редактирования
   const changeSettingsMode = () => {
     setSettingsMode(!settingsMode);
@@ -177,7 +177,6 @@ function App() {
       ) : (
         <></>
       )}
-
       <BookmarkList
         changeSearhInput={changeSearhInput}
         bookmarks={bookmarks}
@@ -186,6 +185,7 @@ function App() {
         removeBookmark={removeBookmark}
         ChangeBookmark={ChangeBookmark}
         changePopupVisibility={changePopupVisibility}
+        columns={columns}
       />
 
       {currentSettings.google ? (
@@ -196,7 +196,6 @@ function App() {
 
       <SettingsPanel
         changePopupVisibility={changePopupVisibility}
-        changeBookmarksVisability={changeBookmarksVisability}
         changeSettingsMode={changeSettingsMode}
         changeDarkTheme={changeDarkTheme}
         settingsMode={settingsMode}

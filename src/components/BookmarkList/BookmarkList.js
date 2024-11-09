@@ -3,6 +3,8 @@ import "./BookmarkList.css";
 import Bookmark from "../Bookmark/Bookmark";
 
 function BookmarkList(props) {
+
+
   return (
     <section className="BookmarkList">
       <h1 className="BookmarkList__title">Вкладки</h1>
@@ -19,6 +21,12 @@ function BookmarkList(props) {
         className={
           props.bookmarks.length > 9 ? "icon-grid icon-grid_wide" : "icon-grid"
         }
+        // style={{
+        //   display: "grid",
+        //   width: "95%",
+        //   gridTemplateColumns: `repeat(${props.columns}, 100px)` ,
+        //   gap: "10px",
+        // }}
       >
         {props.bookmarks.map((bookmark, index) => (
           // Одна закладка

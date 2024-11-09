@@ -11,12 +11,12 @@
     visibility: hidden;
 }
 
-.icon-grid-item:hover .icon-grid-item-setting_hide {
+/* .icon-grid-item:hover .icon-grid-item-setting_hide {
     visibility: visible;
     opacity: 1;
     transition: .3s;
     transition-delay: 1s;
-}
+} */
 
 .icon-grid-item-setting-button {
     position: absolute;
