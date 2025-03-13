@@ -17,6 +17,15 @@ import {
 } from "./constants/constants.js";
 import SettingPopup from "./components/SettingPopup/SettingPopup.js";
 
+
+const images = require.context(
+  "./Image/Base-icons",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+
+const icons = images.keys().map(images);
+
 function App() {
   const [popupIsShown, setPopupIsShown] = useState("none");
   const [bookmarks, setBookmarks] = useState([]);
@@ -29,6 +38,7 @@ function App() {
   const [columns, setColums] = useState(3);
 
   useEffect(() => {
+    console.log(icons)
     // Загрузка закладок из LocalStorage
     const storedBookmarks = getAllBookmarks();
     setBookmarks(storedBookmarks);
@@ -180,6 +190,7 @@ function App() {
       <BookmarkList
         changeSearhInput={changeSearhInput}
         bookmarks={bookmarks}
+        icons={icons}
         settingsMode={settingsMode}
         Settings={currentSettings}
         removeBookmark={removeBookmark}
@@ -201,28 +212,38 @@ function App() {
         settingsMode={settingsMode}
         Settings={currentSettings}
       />
-      <AddPopup
-        popupIsShown={popupIsShown}
-        changePopupVisibility={changePopupVisibility}
-        addBookmark={addBookmark}
-      />
-      <EditPopup
-        popupIsShown={popupIsShown}
-        changePopupVisibility={changePopupVisibility}
-        EditBookmark={EditBookmark}
-        currentBookmark={currentBookmark}
-      />
-      <SettingPopup
-        bookmarks={bookmarks}
-        popupIsShown={popupIsShown}
-        changePopupVisibility={changePopupVisibility}
-        changeOpenInNewTab={changeOpenInNewTab}
-        changeGoogleVisibility={changeGoogleVisibility}
-        changeYandexVisibility={changeYandexVisibility}
-        changeTheme={changeDarkTheme}
-        Settings={currentSettings}
-      />
 
+      {popupIsShown === "AddPopup" && (
+        <AddPopup
+          popupIsShown={popupIsShown}
+          changePopupVisibility={changePopupVisibility}
+          addBookmark={addBookmark}
+          icons={icons}
+        />
+      )}
+
+      {popupIsShown === "EditPopup" && (
+        <EditPopup
+          popupIsShown={popupIsShown}
+          changePopupVisibility={changePopupVisibility}
+          EditBookmark={EditBookmark}
+          currentBookmark={currentBookmark}
+          icons={icons}
+        />
+      )}
+
+      {popupIsShown === "SettingsPopup" && (
+        <SettingPopup
+          bookmarks={bookmarks}
+          popupIsShown={popupIsShown}
+          changePopupVisibility={changePopupVisibility}
+          changeOpenInNewTab={changeOpenInNewTab}
+          changeGoogleVisibility={changeGoogleVisibility}
+          changeYandexVisibility={changeYandexVisibility}
+          changeTheme={changeDarkTheme}
+          Settings={currentSettings}
+        />
+      )}
       <Donate />
     </div>
   );

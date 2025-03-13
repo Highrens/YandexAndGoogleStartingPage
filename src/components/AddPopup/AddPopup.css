@@ -112,7 +112,7 @@
     width: 100%;
 
     padding: 10px;
-
+    margin-top: 10px;
     background-color: var(--succes-color);
     border: .05rem solid var(--border-color);
     border-radius: 25px;
@@ -139,4 +139,16 @@
         margin-left: 75%;
         margin-bottom: 10px;
     }
+}
+
+.base-icons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+    justify-items: center;
+    margin: 10px 0;
+}
+
+.icon-grid-item_h{
+    background-color: var(--highlight-color)
 }

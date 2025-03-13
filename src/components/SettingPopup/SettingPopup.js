@@ -25,11 +25,7 @@ function SettingPopup(props) {
   };
 
   return (
-    <section
-      className={
-        props.popupIsShown === "SettingsPopup" ? "Popup Popup_shown" : "Popup"
-      }
-    >
+    <section className={"Popup Popup_shown"}>
       <button className="Popup__close-button" onClick={ClosePopup}>
         <img className="settings__icon" src={close} alt="close"></img>
       </button>

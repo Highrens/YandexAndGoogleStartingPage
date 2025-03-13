@@ -6,13 +6,16 @@ function EditPopup(props) {
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
 
+  const [currentIcon, setIcon] = useState("");
+  const [customIcon, setCustomIcon] = useState(false);
+
   const ClosePopup = () => {
     props.changePopupVisibility("none");
-  }
+  };
 
   const EditBookmark = (e) => {
     e.preventDefault();
-    const UpdatedBookmark = { name, link };
+    const UpdatedBookmark = customIcon ? { name, link, currentIcon} : { name, link };
 
     props.EditBookmark(UpdatedBookmark);
     props.changePopupVisibility("none");
@@ -21,18 +24,13 @@ function EditPopup(props) {
   useEffect(() => {
     setName(props.currentBookmark.name);
     setLink(props.currentBookmark.link);
+    setCustomIcon(props.currentBookmark.currentIcon);
+    setIcon(props.currentBookmark.currentIcon)
   }, [props.currentBookmark]);
 
   return (
-    <section
-      className={
-        props.popupIsShown === "EditPopup" ? "Popup Popup_shown" : "Popup"
-      }
-    >
-      <button
-        className="Popup__close-button"
-        onClick={ClosePopup}
-      >
+    <section className="Popup Popup_shown">
+      <button className="Popup__close-button" onClick={ClosePopup}>
         <img className="settings__icon" src={close} alt="close"></img>
       </button>
       <form className="Popup__form" onSubmit={EditBookmark}>
@@ -52,10 +50,44 @@ function EditPopup(props) {
           required
           placeholder="Ссылка"
         />
-        <button
-          className={"Popup__form-submit"}
-          type="submit"
-        >
+        <label className="checkbox">
+          Стандартная иконка
+          <input
+            className="checkbox_input"
+            type="checkbox"
+            checked={customIcon}
+            onChange={() => {
+              setCustomIcon(!customIcon);
+            }}
+          />
+          <span className="checkmark"></span>
+        </label>
+        {customIcon ? (
+          <div className="base-icons">
+            {props.icons.map((icon, index) => (
+              <li
+                key={index}
+                className={
+                  currentIcon === index
+                    ? "icon-grid-item icon-grid-item_google icon-grid-item_h"
+                    : "icon-grid-item icon-grid-item_google"
+                }
+              >
+                <img
+                  className="icon-grid-item_icon icon-grid-item_google"
+                  src={icon}
+                  alt={`index favicon`}
+                  onClick={() => {
+                    setIcon(index);
+                  }}
+                />
+              </li>
+            ))}
+          </div>
+        ) : (
+          <></>
+        )}
+        <button className={"Popup__form-submit"} type="submit">
           Edit Bookmark
         </button>
       </form>

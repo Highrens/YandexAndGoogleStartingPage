@@ -3,19 +3,23 @@ import "./AddPopup.css";
 
 import close from "../../Image/close.png";
 
+
 function AddPopup(props) {
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
+  const [customIcon, setCustomIcon] = useState(false);
+  const [currentIcon, setIcon] = useState("");
   const [isDisabled, setIsDisabled] = useState(false);
 
   const ClosePopup = () => {
     props.changePopupVisibility("none");
-  }
+  };
 
   // Обработка добавления новой закладки
   const AddBookmark = (e) => {
     e.preventDefault();
-    const newBookmark = { name, link };
+    
+    const newBookmark = customIcon ? { name, link, currentIcon} : { name, link };
 
     if (!newBookmark.link.includes("https://")) {
       newBookmark.link = "https://" + newBookmark.link;
@@ -34,15 +38,8 @@ function AddPopup(props) {
   }, [name, link]);
 
   return (
-    <section
-      className={
-        props.popupIsShown === "AddPopup" ? "Popup Popup_shown" : "Popup"
-      }
-    >
-      <button
-        className="Popup__close-button"
-        onClick={ClosePopup}
-      >
+    <section className="Popup Popup_shown">
+      <button className="Popup__close-button" onClick={ClosePopup}>
         <img className="settings__icon" src={close} alt="close"></img>
       </button>
       <form className="Popup__form" onSubmit={AddBookmark}>
@@ -62,6 +59,44 @@ function AddPopup(props) {
           required
           placeholder="Ссылка:"
         />
+        <label className="checkbox">
+          Стандартная иконка
+          <input
+            className="checkbox_input"
+            type="checkbox"
+            checked={customIcon}
+            onChange={() => {
+              setCustomIcon(!customIcon);
+            }}
+          />
+          <span className="checkmark"></span>
+        </label>
+        {customIcon ? (
+          <div className="base-icons">
+            {props.icons.map((icon, index) => (
+              <li
+                key={index}
+                className={
+                  currentIcon === index
+                    ? "icon-grid-item icon-grid-item_google icon-grid-item_h"
+                    : "icon-grid-item icon-grid-item_google"
+                }
+              >
+                <img
+                  className="icon-grid-item_icon icon-grid-item_google"
+                  src={icon}
+                  alt={`index favicon`}
+                  onClick={() => {
+                    setIcon(index);
+                  }}
+                />
+              </li>
+            ))}
+          </div>
+        ) : (
+          <></>
+        )}
+
         <button
           className={"Popup__form-submit"}
           type="submit"

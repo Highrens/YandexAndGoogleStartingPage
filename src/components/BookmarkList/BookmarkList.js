@@ -37,6 +37,7 @@ function BookmarkList(props) {
             removeBookmark={props.removeBookmark}
             ChangeBookmark={props.ChangeBookmark}
             Settings={props.Settings}
+            icons={props.icons}
           />
         ))}
       </ul>

@@ -27,7 +27,7 @@ function Bookmark(props) {
       >
         <img
           className="icon-grid-item_icon"
-          src={getFavicon(props.bookmark.link)}
+          src={"currentIcon" in props.bookmark ? props.icons[props.bookmark.currentIcon] : getFavicon(props.bookmark.link)}
           alt={`${props.bookmark.name} favicon`}
         />
         <h2 className="icon-grid-item_name" target="_blank">
